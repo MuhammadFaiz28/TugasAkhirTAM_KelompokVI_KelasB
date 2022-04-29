@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TugasAkhirTAM</string>
+    <string name="judul">Masukkan Judul</string>
+    <string name="how_we_work">Masukkan Judul</string>
+    <string name="logo_name">judul</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="shops">judul_2</string>
+    <string name="hotel">judul_1</string>
+    <string name="asal">judul_3</string>
+    <string name="judul_0">judul_0</string>
+    <string name="search_text">Search</string>
+    <string name="text_content">text_content</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

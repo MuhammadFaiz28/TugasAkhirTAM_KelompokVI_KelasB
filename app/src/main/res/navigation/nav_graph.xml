@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_masuk">
+    <fragment
+        android:id="@+id/menu_1"
+        android:name="com.example.tugasakhirtam.Menu_1"
+        android:label="fragment_menu_1"
+        tools:layout="@layout/fragment_menu_1" />
+    <fragment
+        android:id="@+id/menu_2"
+        android:name="com.example.tugasakhirtam.Menu_2"
+        android:label="fragment_menu_2"
+        tools:layout="@layout/fragment_menu_2" />
+    <fragment
+        android:id="@+id/menu_3"
+        android:name="com.example.tugasakhirtam.menu_3"
+        android:label="fragment_menu_3"
+        tools:layout="@layout/fragment_menu_3" />
+    <fragment
+        android:id="@+id/menu_4"
+        android:name="com.example.tugasakhirtam.menu_4"
+        android:label="fragment_menu_4"
+        tools:layout="@layout/fragment_menu_4" />
+    <fragment
+        android:id="@+id/view_all_1"
+        android:name="com.example.tugasakhirtam.view_all_1"
+        android:label="fragment_view_all_1"
+        tools:layout="@layout/fragment_view_all_1" >
+        <action
+            android:id="@+id/action_view_all_1_to_dashboard_frag"
+            app:destination="@id/dashboard_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_masuk"
+        android:name="com.example.tugasakhirtam.fragment_masuk"
+        android:label="fragment_masuk"
+        tools:layout="@layout/fragment_masuk">
+        <action
+            android:id="@+id/action_fragment_masuk_to_menu_4"
+            app:destination="@id/menu_4" />
+        <action
+            android:id="@+id/action_fragment_masuk_to_dashboard_frag"
+            app:destination="@id/dashboard_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard_frag"
+        android:name="com.example.tugasakhirtam.dashboard_frag"
+        android:label="fragment_dashboard_frag"
+        tools:layout="@layout/fragment_dashboard_frag" >
+        <action
+            android:id="@+id/action_dashboard_frag_to_view_all_1"
+            app:destination="@id/view_all_1" />
+        <action
+            android:id="@+id/action_dashboard_frag_to_menu_3"
+            app:destination="@id/menu_3" />
+    </fragment>
+</navigation>
