@@ -4,32 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
+import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
-    String name[], detail[];
-    int photo[];
-    RecyclerView rvtokoh;
+
+    ListView listView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        rvtokoh = findViewById(R.id.rv_tokoh);
 
-        Bundle b = getIntent().getExtras();
-        photo = b.getIntArray("tokohPhoto");
-        name = getIntent().getStringArrayExtra("tokoh");
-        detail = getIntent().getStringArrayExtra("tokohDetail");
+        listView=(ListView)findViewById(R.id.idList);
 
-        ListAdapter listAdapter = new ListAdapter(this, name, photo, detail);
-        rvtokoh.setAdapter(listAdapter);
-        rvtokoh.setLayoutManager(new LinearLayoutManager(this));
+        ArrayList<String> arrayList=new ArrayList<>();
+
+        arrayList.add("test");
+        arrayList.add("test");
+        arrayList.add("test");
+        arrayList.add("test");
+        arrayList.add("test");
+        arrayList.add("test");
+
+        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
+        listView.setAdapter(arrayAdapter);
     }
 }
