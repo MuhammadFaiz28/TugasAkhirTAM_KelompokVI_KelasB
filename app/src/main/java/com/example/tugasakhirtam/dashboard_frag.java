@@ -171,13 +171,14 @@ public class dashboard_frag extends Fragment implements  NavigationView.OnNaviga
         SetAdapter(mostViewedRecycler, new MostViewedAdpater(mostViewedLocations));
     }
 
-    private void featuredRecycler() {
+    private void featuredRecycler() { 
 
         ArrayList<HelperClass> featuredLocations = new ArrayList<>();
 
         featuredLocations.add(new HelperClass(R.drawable.mariposa, "Mariposa", "Menceritakan sebuah kisah cinta antara dua pesaing olimpiade"));
         featuredLocations.add(new HelperClass(R.drawable.manusiasalmon, "Manusia Salmon", "Kisah Raditya Dika"));
         featuredLocations.add(new HelperClass(R.drawable.a, "A", "Sebuah buku karya Wulanfadi"));
+        
 
         SetAdapter(featuredRecycler, new recyclerAdapter(featuredLocations));
     }
