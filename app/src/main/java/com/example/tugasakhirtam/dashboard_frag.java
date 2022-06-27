@@ -66,7 +66,7 @@ public class dashboard_frag extends Fragment implements  NavigationView.OnNaviga
         featuredRecycler();
         mostViewedRecycler();
 
-       
+
 
 
     }
