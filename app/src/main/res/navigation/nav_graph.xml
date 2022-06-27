@@ -41,23 +41,10 @@
         android:name="com.example.tugasakhirtam.dashboard_frag"
         android:label="fragment_dashboard_frag"
         tools:layout="@layout/fragment_dashboard_frag" >
-        <action
-            android:id="@+id/action_dashboard_frag_to_view_all_1"
-            app:destination="@id/view_all_1" />
+
         <action
             android:id="@+id/action_dashboard_frag_to_menu_3"
             app:destination="@id/menu_3" />
-        <action
-            android:id="@+id/action_dashboard_frag_to_viewall"
-            app:destination="@id/viewall" />
+
     </fragment>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.tugasakhirtam.MainActivity"
-        android:label="viewall"
-        tools:layout="@layout/viewall" />
-    <activity
-        android:id="@+id/viewall"
-        android:name="com.example.tugasakhirtam.RecyclerViewAll.viewall"
-        android:label="viewall" />
 </navigation>

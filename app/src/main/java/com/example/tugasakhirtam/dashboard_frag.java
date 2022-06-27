@@ -66,15 +66,7 @@ public class dashboard_frag extends Fragment implements  NavigationView.OnNaviga
         featuredRecycler();
         mostViewedRecycler();
 
-        TextView textView = view.findViewById(R.id.view_all_1);
-        textView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intena = new Intent(dashboard_frag.this.getActivity(), viewall.class);
-                startActivity(intena);
-
-            }
-        });
+       
 
 
     }
