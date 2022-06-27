@@ -26,6 +26,7 @@ import com.example.tugasakhirtam.Recycler.HelperClass;
 import com.example.tugasakhirtam.Recycler.MostViewedAdpater;
 import com.example.tugasakhirtam.Recycler.helperClass_2;
 import com.example.tugasakhirtam.Recycler.recyclerAdapter;
+import com.example.tugasakhirtam.RecyclerViewAll.viewall;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -68,13 +69,12 @@ public class dashboard_frag extends Fragment implements  NavigationView.OnNaviga
         featuredRecycler();
         mostViewedRecycler();
 
-        final NavController navController = Navigation.findNavController(getView());
-
         TextView textView = view.findViewById(R.id.view_all_1);
         textView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                navController.navigate(R.id.action_dashboard_frag_to_view_all_1);
+                Intent intena = new Intent(dashboard_frag.this.getActivity(), viewall.class);
+                startActivity(intena);
 
             }
         });

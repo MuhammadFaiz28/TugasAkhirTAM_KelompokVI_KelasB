@@ -25,15 +25,6 @@
         android:label="fragment_menu_4"
         tools:layout="@layout/fragment_menu_4" />
     <fragment
-        android:id="@+id/view_all_1"
-        android:name="com.example.tugasakhirtam.view_all_1"
-        android:label="fragment_view_all_1"
-        tools:layout="@layout/fragment_view_all_1" >
-        <action
-            android:id="@+id/action_view_all_1_to_dashboard_frag"
-            app:destination="@id/dashboard_frag" />
-    </fragment>
-    <fragment
         android:id="@+id/fragment_masuk"
         android:name="com.example.tugasakhirtam.fragment_masuk"
         android:label="fragment_masuk"
@@ -56,5 +47,17 @@
         <action
             android:id="@+id/action_dashboard_frag_to_menu_3"
             app:destination="@id/menu_3" />
+        <action
+            android:id="@+id/action_dashboard_frag_to_viewall"
+            app:destination="@id/viewall" />
     </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.tugasakhirtam.MainActivity"
+        android:label="viewall"
+        tools:layout="@layout/viewall" />
+    <activity
+        android:id="@+id/viewall"
+        android:name="com.example.tugasakhirtam.RecyclerViewAll.viewall"
+        android:label="viewall" />
 </navigation>
