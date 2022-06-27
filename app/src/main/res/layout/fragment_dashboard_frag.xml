@@ -150,13 +150,6 @@
                             android:textColor="@color/black"
                             android:textSize="20sp" />
 
-                        <TextView
-                            android:id="@+id/view_all_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:text="View All" />
 
 
                     </RelativeLayout>

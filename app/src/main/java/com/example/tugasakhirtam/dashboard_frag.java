@@ -8,8 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,7 +24,6 @@ import com.example.tugasakhirtam.Recycler.HelperClass;
 import com.example.tugasakhirtam.Recycler.MostViewedAdpater;
 import com.example.tugasakhirtam.Recycler.helperClass_2;
 import com.example.tugasakhirtam.Recycler.recyclerAdapter;
-import com.example.tugasakhirtam.RecyclerViewAll.viewall;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
