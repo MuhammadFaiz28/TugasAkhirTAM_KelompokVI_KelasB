@@ -33,6 +33,18 @@ public class ListActivity extends AppCompatActivity {
         arrayList.add("Hujan");
         arrayList.add("Cinta Brontosaurus");
         arrayList.add("Bulan");
+        arrayList.add("A");
+        arrayList.add("Ketika Cinta Bertasbih");
+        arrayList.add("Hafalan Sholat Delisa");
+        arrayList.add("Pulang");
+        arrayList.add("Pergi");
+        arrayList.add("Pulang-Pergi");
+        arrayList.add("Janji");
+        arrayList.add("Bumi");
+        arrayList.add("Sekuntum Mawar");
+        arrayList.add("Experience");
+        arrayList.add("Susah Sinyal");
+
 
         ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
