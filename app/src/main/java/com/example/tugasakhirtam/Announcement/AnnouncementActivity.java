@@ -23,7 +23,7 @@ public class AnnouncementActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_announcement);
 
         cvHead = findViewById(R.id.cardHeadLine);
         cvSports = findViewById(R.id.cardSports);
