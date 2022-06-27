@@ -24,12 +24,15 @@ public class ListActivity extends AppCompatActivity {
 
         ArrayList<String> arrayList=new ArrayList<>();
 
-        arrayList.add("test");
-        arrayList.add("test");
-        arrayList.add("test");
-        arrayList.add("test");
-        arrayList.add("test");
-        arrayList.add("test");
+        arrayList.add("Matahari");
+        arrayList.add("Kambing Jantan");
+        arrayList.add("Fresh Graduate");
+        arrayList.add("Dilan");
+        arrayList.add("Perahu Kertas");
+        arrayList.add("Menanti Restu Langit");
+        arrayList.add("Hujan");
+        arrayList.add("Cinta Brontosaurus");
+        arrayList.add("Bulan");
 
         ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
