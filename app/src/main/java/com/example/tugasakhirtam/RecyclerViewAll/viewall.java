@@ -38,7 +38,7 @@ public class viewall extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().setTitle("Itzy Data");
+        getSupportActionBar().setTitle("Data");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewall);
         recyclerView = (RecyclerView)findViewById( R.id.recycler_view_1111);
