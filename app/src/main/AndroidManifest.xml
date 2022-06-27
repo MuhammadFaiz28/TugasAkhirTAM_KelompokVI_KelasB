@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tugasakhirtam">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,13 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasAkhirTAM">
         <activity
-            android:name=".AnnouncementActivity"
+            android:name=".Announcement.AnnouncementActivity"
             android:exported="false" />
         <activity
             android:name=".ListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -36,27 +34,26 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".activities.EntertaimentActivity"
+            android:name=".Announcement.EntertaimentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.HealthActivity"
+            android:name=".Announcement.HealthActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.BusinessActivity"
+            android:name=".Announcement.BusinessActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.TechnologyActivity"
+            android:name=".Announcement.TechnologyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.HeadLineActivity"
+            android:name=".Announcement.HeadLineActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SportsNewsActivity"
+            android:name=".Announcement.SportsNewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.OpenNewsActivity"
+            android:name=".Announcement.OpenNewsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Announcement.BusinessActivity" />
     </application>
 
 </manifest>

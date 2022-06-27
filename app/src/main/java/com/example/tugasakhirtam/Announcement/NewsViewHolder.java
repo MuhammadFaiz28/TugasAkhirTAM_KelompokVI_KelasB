@@ -9,9 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tugasakhirtam.R;
 import com.google.android.material.card.MaterialCardView;
 
-/**
- * Created by Azhar Rivaldi on 22-12-2019.
- */
 public class NewsViewHolder extends RecyclerView.ViewHolder {
 
     public ImageView image;

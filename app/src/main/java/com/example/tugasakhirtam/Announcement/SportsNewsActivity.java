@@ -9,27 +9,25 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
-
-
-import com.example.tugasakhirtam.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.tugasakhirtam.R;
+
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BusinessActivity extends AppCompatActivity implements NewsAdapter.onSelectData {
+public class SportsNewsActivity extends AppCompatActivity implements NewsAdapter.onSelectData {
 
-    RecyclerView rvBusiness;
+    RecyclerView rvSportNews;
     NewsAdapter newsAdapter;
     List<ModelNews> modelNews = new ArrayList<>();
     ProgressDialog progressDialog;
@@ -37,24 +35,23 @@ public class BusinessActivity extends AppCompatActivity implements NewsAdapter.o
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView( R.layout.activity_news);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Mohon tunggu");
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Sedang menampilkan data");
 
-        rvBusiness = findViewById(R.id.rvNews);
-        rvBusiness.setHasFixedSize(true);
-        rvBusiness.setLayoutManager(new LinearLayoutManager(this));
-
+        rvSportNews = findViewById(R.id.rvNews);
+        rvSportNews.setHasFixedSize(true);
+        rvSportNews.setLayoutManager(new LinearLayoutManager(this));
         setupToolbar();
         loadJSON();
     }
 
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbNews);
-        toolbar.setTitle("Berita Bisnis");
+        toolbar.setTitle("Berita Olahraga");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -70,7 +67,7 @@ public class BusinessActivity extends AppCompatActivity implements NewsAdapter.o
 
     private void loadJSON() {
         progressDialog.show();
-        AndroidNetworking.get(NewsApi.GET_CATEGORY_BUSINESS)
+        AndroidNetworking.get(NewsApi.GET_CATEGORY_SPORTS)
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -92,26 +89,26 @@ public class BusinessActivity extends AppCompatActivity implements NewsAdapter.o
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(BusinessActivity.this, "Gagal menampilkan data!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SportsNewsActivity.this, "Gagal menampilkan data!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onError(ANError anError) {
                         progressDialog.dismiss();
-                        Toast.makeText(BusinessActivity.this, "Tidak ada jaringan internet!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SportsNewsActivity.this, "Tidak ada jaringan internet!", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
     private void showNews() {
-        newsAdapter = new NewsAdapter(BusinessActivity.this, modelNews, this);
-        rvBusiness.setAdapter(newsAdapter);
+        newsAdapter = new NewsAdapter(SportsNewsActivity.this, modelNews, this);
+        rvSportNews.setAdapter(newsAdapter);
     }
 
     @Override
     public void onSelected(ModelNews mdlNews) {
-        startActivity(new Intent(BusinessActivity.this, OpenNewsActivity.class).putExtra("url", mdlNews.getUrl()));
+        startActivity(new Intent(SportsNewsActivity.this, OpenNewsActivity.class).putExtra("url", mdlNews.getUrl()));
     }
 
 }

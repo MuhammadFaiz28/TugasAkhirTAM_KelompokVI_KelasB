@@ -11,9 +11,13 @@
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/drawable/ic_baseline_center_focus_weak_24.xml" value="0.1515" />
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/activity_announcement.xml" value="0.182518115942029" />
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/activity_list.xml" value="0.182518115942029" />
+        <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/activity_news.xml" value="0.182518115942029" />
+        <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/activity_open_news.xml" value="0.182518115942029" />
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/fragment_view_all_1.xml" value="0.182518115942029" />
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/item_main_grid.xml" value="0.182518115942029" />
         <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/list_detail.xml" value="0.182518115942029" />
+        <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/layout/list_item_berita.xml" value="0.182518115942029" />
+        <entry key="..\:/xampp/htdocs/TugasAkhirTAM_KelompokVI_KelasB/app/src/main/res/menu/menu_open_news.xml" value="0.259375" />
       </map>
     </option>
   </component>
