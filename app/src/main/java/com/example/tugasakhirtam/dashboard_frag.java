@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.tugasakhirtam.Announcement.AnnouncementActivity;
 import com.example.tugasakhirtam.Recycler.HelperClass;
 import com.example.tugasakhirtam.Recycler.MostViewedAdpater;
 import com.example.tugasakhirtam.Recycler.helperClass_2;
@@ -171,7 +172,7 @@ public class dashboard_frag extends Fragment implements  NavigationView.OnNaviga
         SetAdapter(mostViewedRecycler, new MostViewedAdpater(mostViewedLocations));
     }
 
-    private void featuredRecycler() { 
+    private void featuredRecycler() {
 
         ArrayList<HelperClass> featuredLocations = new ArrayList<>();
 

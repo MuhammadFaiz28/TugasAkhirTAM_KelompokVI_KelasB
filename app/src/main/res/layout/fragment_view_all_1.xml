@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view_all_1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_1_all"
         android:layout_width="match_parent"
-        android:layout_height="605dp"
-        android:fontFamily="@font/brandon"
-        android:gravity="center"
-        android:text="Ini adalah Fragment View All"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button_back_view_all"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:hapticFeedbackEnabled="false"
-        android:text="Back" />
-
-</FrameLayout>
+        android:layout_height="match_parent" />
+</RelativeLayout>

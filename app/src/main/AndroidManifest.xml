@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tugasakhirtam">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +34,29 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".activities.EntertaimentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HealthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TechnologyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HeadLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SportsNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OpenNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Announcement.BusinessActivity" />
     </application>
 
 </manifest>

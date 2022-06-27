@@ -1,25 +1,38 @@
 package com.example.tugasakhirtam;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.tugasakhirtam.Announcement.AnnouncementActivity;
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link view_all_1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class view_all_1 extends Fragment {
+public class view_all_1 extends Fragment implements  NavigationView.OnNavigationItemSelectedListener{
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ImageView menuIcon;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,16 +84,54 @@ public class view_all_1 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final NavController navController = Navigation.findNavController(getView());
+        drawerLayout = view.findViewById(R.id.drawer_layout);
+        navigationView = view.findViewById(R.id.nav_view);
+        menuIcon = view.findViewById(R.id.menu_icon);
 
-        Button button = view.findViewById(R.id.button_back_view_all);
-        button.setOnClickListener(new View.OnClickListener() {
+        navigationDrawer();
+
+
+
+    }
+
+    private void navigationDrawer() {
+        //Drawer
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_view_all_1_to_dashboard_frag);
-
+            public void onClick(View view) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+    }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.nav_logout:
+                Intent intent = new Intent(view_all_1.this.getActivity(), MainActivity.class);
+                startActivity(intent);
+        }
+        switch (item.getItemId()) {
+
+            case R.id.nav_announcement:
+                Intent intent_1 = new Intent(view_all_1.this.getActivity(), AnnouncementActivity.class);
+                startActivity(intent_1);
+        }
+        switch (item.getItemId()){
+
+            case R.id.nav_list:
+                Intent intent_2 = new Intent(view_all_1.this.getActivity(),ListActivity.class);
+                startActivity(intent_2);
+
+        }
+
+        return true;
     }
 }
